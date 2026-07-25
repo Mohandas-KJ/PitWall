@@ -1,0 +1,100 @@
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs and temp files
+*.log
+*.tmp
+tmp/
+.tmp/
+*.pid
+*.seed
+*.bak
+
+# Dependencies and package managers
+node_modules/
+vendor/
+packages/
+bower_components/
+jspm_packages/
+.pnpm-store/
+.npm/
+.yarn/*
+!.yarn/releases/
+!.yarn/plugins/
+!.yarn/rc.yml
+
+# Python
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.venv/
+venv/
+env/
+ENV/
+*.py[cod]
+*.pyd
+*.egg-info/
+
+# Node / frontend builds
+.next/
+.nuxt/
+.svelte-kit/
+.parcel-cache/
+.vite/
+.turbo/
+.eslintcache/
+*.tsbuildinfo
+
+dist/
+build/
+out/
+coverage/
+.cache/
+
+# Java / JVM
+target/
+.gradle/
+.gradle-cache/
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+*.ipr
+*.iws
+
+# .NET
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Databases / local data
+*.sqlite
+*.sqlite3
+*.db
+
+# Miscellaneous
+*.orig
+*.rej
