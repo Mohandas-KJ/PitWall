@@ -41,6 +41,8 @@ __pycache__/
 .pyre/
 .venv/
 venv/
+test
+test/
 env/
 ENV/
 *.py[cod]
