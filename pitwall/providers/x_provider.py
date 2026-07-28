@@ -20,5 +20,8 @@ class XProvider:
         self.browser = self.playwright.chromium.launch(headless=False)
         self.page = self.browser.new_page()
         self.page.goto("https://x.com/F1")
-        self.page.wait_for_load_state("networkidle")
         print("Connected to F1!")
+
+    def close(self):
+        self.browser.close()
+        self.playwright.stop()
