@@ -26,13 +26,32 @@ class XProvider:
         posts = self.page.locator("article")
         print(f"Found {posts.count()} posts!")
 
+        # Get no of Posts
         first_post = posts.nth(0)
 
-        print(first_post.inner_text())
+        # Extrct Link
+        status_link = first_post.locator('a[href^="/F1/status/"]:not([href*="/photo/"])').first
 
-        print(first_post.evaluate("(element) => element.outerHTML"))
+        # Text
+        text = first_post.locator('div[dir="auto"]').inner_text()
 
-        return posts
+        # Timestamp
+        timestamp = status_link.inner_text()
+
+        # Extract URL
+        href = status_link.get_attribute("href")
+        url = f"https://x.com{href}"
+
+        images = first_post.locator('img[src*="pbs.twimg.com/media"]')
+        image_url = []
+
+        for i in range(images.count()):
+            src = images.nth(i).get_attribute("src")
+            if src:
+                image_url.append(src)
+
+
+        return text,timestamp,url,image_url
 
     def close(self):
         self.browser.close()
