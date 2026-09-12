@@ -25,6 +25,13 @@ class XProvider:
     def find_posts(self):
         posts = self.page.locator("article")
         print(f"Found {posts.count()} posts!")
+
+        first_post = posts.nth(0)
+
+        print(first_post.inner_text())
+
+        print(first_post.evaluate("(element) => element.outerHTML"))
+
         return posts
 
     def close(self):
