@@ -8,6 +8,7 @@ def main():
     provider = XProvider()
 
     provider.connect()
+    posts = provider.find_posts()
     input("Enter to close......")
     provider.close()
 

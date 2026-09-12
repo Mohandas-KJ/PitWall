@@ -22,6 +22,11 @@ class XProvider:
         self.page.goto("https://x.com/F1")
         print("Connected to F1!")
 
+    def find_posts(self):
+        posts = self.page.locator("article")
+        print(f"Found {posts.count()} posts!")
+        return posts
+
     def close(self):
         self.browser.close()
         self.playwright.stop()
