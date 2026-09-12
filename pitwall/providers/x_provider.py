@@ -22,12 +22,12 @@ class XProvider:
         self.page.goto("https://x.com/F1")
         print("Connected to F1!")
 
-    def find_posts(self):
+    def find_posts(self,n):
         posts = self.page.locator("article")
         print(f"Found {posts.count()} posts!")
 
         # Get no of Posts
-        first_post = posts.nth(0)
+        first_post = posts.nth(n)
 
         # Extrct Link
         status_link = first_post.locator('a[href^="/F1/status/"]:not([href*="/photo/"])').first
@@ -51,7 +51,12 @@ class XProvider:
                 image_url.append(src)
 
 
-        return text,timestamp,url,image_url
+        return {
+            "text": text,
+            "time": timestamp,
+            "url": url,
+            "image_url": image_url
+        }
 
     def close(self):
         self.browser.close()
