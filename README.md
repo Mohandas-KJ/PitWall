@@ -295,11 +295,16 @@ Settings live in `pitwall/config.py`. Check that file for the options currently 
 
 <div align="center">
 
-<!-- Replace with real screenshots, e.g. docs/screenshots/dashboard.png -->
-
-| Dashboard |
-|:---:|
-| *Screenshot coming soon* |
+<table>
+<tr>
+<td><img src="assets/screenshots/Dashboard.png" alt="Dashboard"></td>
+<td><img src="assets/screenshots/Terminal.png" alt="Pitwall Terminal"></td>
+</tr>
+<tr>
+<td align="center"><sub>Dashboard</sub></td>
+<td align="center"><sub>Terminal</sub></td>
+</tr>
+</table>
 
 </div>
 
